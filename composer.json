@@ -1,0 +1,33 @@
+{
+    "name": "navjobs/google-geocoder",
+    "description": "Abstracts the geocoding process through Google Maps.",
+    "keywords": [
+        "google",
+        "geocoding",
+        "maps"
+    ],
+    "homepage": "https://navjobs.com",
+    "license": "MIT",
+    "require": {
+        "php" : ">=7.0.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "^4.0",
+        "mockery/mockery": "^0.9.4",
+        "satooshi/php-coveralls": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NavJobs\\GoogleGeocoder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NavJobs\\GoogleGeocoder\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
