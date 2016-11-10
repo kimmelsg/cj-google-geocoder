@@ -1,10 +1,9 @@
 <?php
 
-namespace Spatie\Geocoder;
+namespace NavJobs\GoogleGeocoder;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
-use NavJobs\GoogleGeocoder\GoogleGeocoder;
 
 class GoogleGeocoderServiceProvider extends ServiceProvider
 {
