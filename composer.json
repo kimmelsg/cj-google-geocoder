@@ -1,6 +1,6 @@
 {
     "name": "navjobs/google-geocoder",
-    "description": "Abstracts the geocoding process through Google Maps.",
+    "description": "Abstraction for geocoding through Google Maps.",
     "keywords": [
         "google",
         "geocoding",
