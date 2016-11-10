@@ -45,7 +45,7 @@ $geocoder = new Geocoder;
 $geocoder->reverseByPlaceId('ChIJOwg_06VPwokRYv534QaPC8g');
 ```
 
-All of these methods return a standard repose format as follows:
+All of these methods return a standard response format as follows:
 
 ```php
 [
