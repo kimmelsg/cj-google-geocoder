@@ -2,7 +2,6 @@
 
 namespace NavJobs\GoogleGeocoder\Test;
 
-
 class TestResponses
 {
     /**
