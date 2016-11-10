@@ -1,3 +1,6 @@
+[![Circle CI](https://circleci.com/gh/navjobs/google-geocoder.svg?style=shield)](https://circleci.com/gh/navjobs/google-geocoder)
+[![Code Climate](https://codeclimate.com/github/navjobs/google-geocoder/badges/gpa.svg)](https://codeclimate.com/github/navjobs/google-geocoder)
+
 ###### Google Geocoding
 Provides an abstraction for requests to Google Maps geocoding service.
 
