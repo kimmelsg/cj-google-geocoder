@@ -119,6 +119,18 @@ class GoogleGeocoderTest extends TestCase
         }
     }
 
+    public function testItThrowsAnAccessDeniedException()
+    {
+        $mockClient = $this->getMockClient(TestResponses::getAccessDeniedResponse());
+        $geocoder = new GoogleGeocoder($mockClient);
+
+        try {
+            $geocoder->geocode('asheville');
+        } catch (\Exception $e) {
+            $this->assertEquals(AccessDenied::class, get_class($e));
+        }
+    }
+
     public function testItThrowsAnInvalidKeyExceptionWhenBadKey()
     {
         $mockClient = $this->getMockClient(TestResponses::getInvalidKeyResponse());
@@ -131,7 +143,7 @@ class GoogleGeocoderTest extends TestCase
         }
     }
 
-    public function testItThrowsAnAccessDeniedException()
+    public function testItThrowsAQuotaExceededException()
     {
         $mockClient = $this->getMockClient(TestResponses::getQuotedExceededResponse());
         $geocoder = new GoogleGeocoder($mockClient);
