@@ -2,6 +2,8 @@
 
 namespace NavJobs\GoogleGeocoder\Test;
 
+use GuzzleHttp\Client;
+use Mockery;
 use NavJobs\GoogleGeocoder\Exceptions\AccessDenied;
 use NavJobs\GoogleGeocoder\Exceptions\InvalidKey;
 use NavJobs\GoogleGeocoder\Exceptions\NoResult;
@@ -88,6 +90,21 @@ class GoogleGeocoderTest extends TestCase
                 'longitude' => -82.6708731
             ]
         ], $first['bounds']);
+    }
+
+    public function testItCanAddTheOptionalArguments()
+    {
+        $spyClient = Mockery::mock(Client::class)
+            ->shouldReceive('get')
+            ->once()
+            ->with("https://maps.googleapis.com/maps/api/geocode/json?&key=testkey&language=en&region=testregion&address=asheville")
+            ->andReturnSelf()
+            ->shouldReceive('getBody')
+            ->andReturn(TestResponses::getCityResponse())
+            ->getMock();
+        $geocoder = new GoogleGeocoder($spyClient, 'testkey', 'en', 'testregion');
+
+        $geocoder->geocode('asheville');
     }
 
     public function testItThrowsANoResultExceptionWhenNoResponse()
