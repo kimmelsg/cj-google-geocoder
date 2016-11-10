@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 use NavJobs\GoogleGeocoder\GoogleGeocoder;
 
-class GeocoderServiceProvider extends ServiceProvider
+class GoogleGeocoderServiceProvider extends ServiceProvider
 {
     public function boot()
     {
