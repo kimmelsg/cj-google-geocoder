@@ -10,13 +10,13 @@ class GoogleGeocoderServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../../../config/geocoder.php' => config_path('geocoder.php'),
+            __DIR__.'/../config/geocoder.php' => config_path('geocoder.php'),
         ], 'config');
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../../../config/geocoder.php', 'geocoder');
+        $this->mergeConfigFrom(__DIR__.'/../config/geocoder.php', 'geocoder');
 
         $this->app->bind(GoogleGeocoder::class, function ($app) {
             $client = new Client();
