@@ -11,7 +11,7 @@ use NavJobs\GoogleGeocoder\Exceptions\QuotaExceeded;
 class GoogleGeocoder
 {
     protected $endpoint = 'https://maps.googleapis.com/maps/api/geocode/json?';
-    protected $curlHttpAdapter;
+    protected $client;
 
     /**
      * GoogleGeocoder constructor.
