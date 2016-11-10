@@ -28,6 +28,8 @@ class GoogleGeocoder
     }
 
     /**
+     * Geocodes the provided address
+     *
      * @param $address
      * @return array
      */
@@ -43,6 +45,8 @@ class GoogleGeocoder
     }
 
     /**
+     * Reverse geocodes by the provided place id.
+     *
      * @param $placeId
      * @return array
      */
@@ -58,6 +62,8 @@ class GoogleGeocoder
     }
 
     /**
+     * Reverse geocodes by the provided coordinates.
+     *
      * @param $latitude
      * @param $longitude
      * @return array
@@ -74,6 +80,8 @@ class GoogleGeocoder
     }
 
     /**
+     * Adds any of the optional query parameters to the query.
+     *
      * @param $apiKey
      * @param $language
      * @param $region
@@ -94,6 +102,8 @@ class GoogleGeocoder
     }
 
     /**
+     * Helper that adds an additional parameter to the query.
+     *
      * @param $key
      * @param $value
      * @return string
@@ -104,6 +114,8 @@ class GoogleGeocoder
     }
 
     /**
+     * Get the response from Google and decode it.
+     *
      * @param $endpoint
      * @return mixed
      */
@@ -113,6 +125,8 @@ class GoogleGeocoder
     }
 
     /**
+     * Makes sure the response does not contain any errors.
+     *
      * @param $response
      * @return mixed
      * @throws AccessDenied
@@ -148,6 +162,8 @@ class GoogleGeocoder
     }
 
     /**
+     * Transform the response from Google into a result set.
+     *
      * @param $results
      * @return array
      */
