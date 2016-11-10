@@ -2,8 +2,8 @@
 
 namespace NavJobs\GoogleGeocoder\Test;
 
-use GuzzleHttp\Client;
 use Mockery;
+use GuzzleHttp\Client;
 use PHPUnit_Framework_TestCase;
 
 abstract class TestCase extends PHPUnit_Framework_TestCase
