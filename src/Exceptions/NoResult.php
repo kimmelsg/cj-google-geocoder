@@ -2,9 +2,7 @@
 
 namespace NavJobs\GoogleGeocoder\Exceptions;
 
-use Exception;
-
-class NoResult extends Exception
+class NoResult extends GeocodingFailure
 {
 
 }

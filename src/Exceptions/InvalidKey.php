@@ -2,9 +2,7 @@
 
 namespace NavJobs\GoogleGeocoder\Exceptions;
 
-use Exception;
-
-class InvalidKey extends Exception
+class InvalidKey extends GeocodingFailure
 {
 
 }

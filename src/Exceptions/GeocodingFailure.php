@@ -2,7 +2,9 @@
 
 namespace NavJobs\GoogleGeocoder\Exceptions;
 
-class AccessDenied extends GeocodingFailure
+use Exception;
+
+class GeocodingFailure extends Exception
 {
 
 }
