@@ -23,6 +23,7 @@ class GoogleGeocoderTest extends TestCase
         $geocoder = new GoogleGeocoder($mockClient);
 
         $response = $geocoder->geocode('asheville');
+
         $first = array_pop($response);
 
         $this->assertEquals('Asheville, NC, USA', $first['address']);
@@ -40,6 +41,7 @@ class GoogleGeocoderTest extends TestCase
                 'longitude' => -82.6708731
             ]
         ], $first['bounds']);
+        $this->assertEquals('Asheville', $first['address_components']['locality']);
     }
 
     public function testItCanReverseGeocodeByAPlaceId()
@@ -105,6 +107,20 @@ class GoogleGeocoderTest extends TestCase
         $geocoder = new GoogleGeocoder($spyClient, 'testkey', 'en', 'testregion');
 
         $geocoder->geocode('asheville');
+    }
+
+    public function testItReturnsTheAddressComponents()
+    {
+        $mockClient = $this->getMockClient(TestResponses::getCityResponse());
+        $geocoder = new GoogleGeocoder($mockClient);
+
+        $response = $geocoder->geocode('asheville');
+
+        $first = array_pop($response);
+
+        $this->assertEquals('Asheville', $first['address_components']['locality']);
+        $this->assertEquals('North Carolina', $first['address_components']['administrative_area_level_1']);
+        $this->assertEquals('United States', $first['address_components']['country']);
     }
 
     public function testItThrowsANoResultExceptionWhenNoResponse()

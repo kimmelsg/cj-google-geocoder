@@ -176,7 +176,8 @@ class GoogleGeocoder
                 'latitude' => $coordinates['lat'],
                 'longitude' => $coordinates['lng'],
                 'place_id' => $result['place_id'],
-                'types' => $result['types']
+                'types' => $result['types'],
+                'address_components' => $this->buildAddressComponents($result)
             ];
 
             if (isset($result['geometry']['bounds'])) {
@@ -197,4 +198,14 @@ class GoogleGeocoder
         }, $results);
     }
 
+    private function buildAddressComponents($result)
+    {
+        $test = [];
+
+        foreach ($result['address_components'] as $component) {
+            $test[$component['types'][0]] = $component['long_name'];
+        }
+
+        return $test;
+    }
 }
