@@ -30,5 +30,12 @@
     },
     "scripts": {
         "test": "phpunit"
+    },
+    "extra": {
+            "laravel": {
+                    "providers": [
+                            "ConstructionJobs\GoogleGeocoder\GoogleGeocoderServiceProvider"
+                    ]
+            }
     }
 }
