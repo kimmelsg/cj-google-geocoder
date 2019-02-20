@@ -1,12 +1,12 @@
 {
-    "name": "navjobs/google-geocoder",
+    "name": "ConstructionJobs/google-geocoder",
     "description": "Abstraction for geocoding through Google Maps.",
     "keywords": [
         "google",
         "geocoding",
         "maps"
     ],
-    "homepage": "https://navjobs.com",
+    "homepage": "https://constructionjobs.com",
     "license": "MIT",
     "require": {
         "php" : ">=5.6.0",
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NavJobs\\GoogleGeocoder\\": "src"
+            "ConstructionJobs\\GoogleGeocoder\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NavJobs\\GoogleGeocoder\\Test\\": "tests"
+            "ConstructionJobs\\GoogleGeocoder\\Test\\": "tests"
         }
     },
     "scripts": {
