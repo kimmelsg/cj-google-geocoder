@@ -1,14 +1,14 @@
 <?php
 
-namespace NavJobs\GoogleGeocoder\Test;
+namespace ConstructionJobs\GoogleGeocoder\Test;
 
 use Mockery;
 use GuzzleHttp\Client;
-use NavJobs\GoogleGeocoder\GoogleGeocoder;
-use NavJobs\GoogleGeocoder\Exceptions\NoResult;
-use NavJobs\GoogleGeocoder\Exceptions\InvalidKey;
-use NavJobs\GoogleGeocoder\Exceptions\AccessDenied;
-use NavJobs\GoogleGeocoder\Exceptions\QuotaExceeded;
+use ConstructionJobs\GoogleGeocoder\GoogleGeocoder;
+use ConstructionJobs\GoogleGeocoder\Exceptions\NoResult;
+use ConstructionJobs\GoogleGeocoder\Exceptions\InvalidKey;
+use ConstructionJobs\GoogleGeocoder\Exceptions\AccessDenied;
+use ConstructionJobs\GoogleGeocoder\Exceptions\QuotaExceeded;
 
 class GoogleGeocoderTest extends TestCase
 {

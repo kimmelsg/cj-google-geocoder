@@ -1,6 +1,6 @@
 <?php
 
-namespace NavJobs\GoogleGeocoder\Exceptions;
+namespace ConstructionJobs\GoogleGeocoder\Exceptions;
 
 class InvalidKey extends GeocodingFailure
 {
