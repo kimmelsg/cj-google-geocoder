@@ -1,6 +1,6 @@
 <?php
 
-namespace NavJobs\GoogleGeocoder;
+namespace ConstructionJobs\GoogleGeocoder;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;

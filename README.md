@@ -1,5 +1,5 @@
 [![Circle CI](https://circleci.com/gh/ConstructionJobs/google-geocoder.svg?style=shield)](https://circleci.com/gh/ConstructionJobs/google-geocoder)
-[![Code Climate](https://codeclimate.com/github/navjobs/google-geocoder/badges/gpa.svg)](https://codeclimate.com/github/navjobs/google-geocoder)
+[![Code Climate](https://codeclimate.com/github/ConstructionJobs/google-geocoder/badges/gpa.svg)](https://codeclimate.com/github/ConstructionJobs/google-geocoder)
 
 ###### Google Geocoding
 Provides an abstraction for requests to Google Maps geocoding service.
@@ -8,7 +8,7 @@ Provides an abstraction for requests to Google Maps geocoding service.
 You can install this package via Composer using this command:
 
 ```bash
-composer require navjobs/google-geocoder
+composer require ConstructionJobs/google-geocoder
 ```
 
 ## Laravel Installation
@@ -18,14 +18,14 @@ This package comes with a service provider for use with Laravel. To install the 
 // config/app.php
 'providers' => [
     // other providers
-    'NavJobs\GoogleGeocoder\GoogleGeocoderServiceProvider'
+    'ConstructionJobs\GoogleGeocoder\GoogleGeocoderServiceProvider'
 ];
 ```
 
 Also you must publish the config file:
 
 ```php
-php artisan vendor:publish --provider="NavJobs\GoogleGeocoder\GoogleGeocoderServiceProvider"
+php artisan vendor:publish --provider="ConstructionJobs\GoogleGeocoder\GoogleGeocoderServiceProvider"
 ```
 
 The config file allows you to set your `api key`, `language` and `region`.

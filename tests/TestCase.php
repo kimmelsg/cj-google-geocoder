@@ -1,6 +1,6 @@
 <?php
 
-namespace NavJobs\GoogleGeocoder\Test;
+namespace ConstructionJobs\GoogleGeocoder\Test;
 
 use Mockery;
 use GuzzleHttp\Client;

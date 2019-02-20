@@ -1,8 +1,8 @@
 <?php
 
-namespace NavJobs\GoogleGeocoder\Exceptions;
+namespace ConstructionJobs\GoogleGeocoder\Exceptions;
 
-class QuotaExceeded extends GeocodingFailure 
+class QuotaExceeded extends GeocodingFailure
 {
 
 }
