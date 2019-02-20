@@ -12,7 +12,10 @@ composer require ConstructionJobs/google-geocoder
 ```
 
 ## Laravel Installation
-This package comes with a service provider for use with Laravel. To install the service provider:
+This package comes with a service provider for use with Laravel.
+You will not need to do anything if you're using laravel version 5.5 and up.
+
+If you are using laravel 5.4 or below, to install the service provider:
 
 ```php
 // config/app.php
