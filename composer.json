@@ -32,10 +32,10 @@
         "test": "phpunit"
     },
     "extra": {
-            "laravel": {
-                    "providers": [
-                            "ConstructionJobs\\GoogleGeocoder\\GoogleGeocoderServiceProvider"
-                    ]
-            }
+        "laravel": {
+            "providers": [
+                "ConstructionJobs\\GoogleGeocoder\\GoogleGeocoderServiceProvider"
+            ]
+        }
     }
 }
