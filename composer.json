@@ -34,7 +34,7 @@
     "extra": {
             "laravel": {
                     "providers": [
-                            "ConstructionJobs\GoogleGeocoder\GoogleGeocoderServiceProvider"
+                            "ConstructionJobs\\GoogleGeocoder\\GoogleGeocoderServiceProvider"
                     ]
             }
     }
